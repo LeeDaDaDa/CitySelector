@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="souyu.com.cityselector.ui.MainActivity">
+
+
+    <LinearLayout
+        android:background="#1CB6D0"
+        android:id="@+id/ll_linearLayout_qiantou"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+        <TextView
+            android:onClick="click_city"
+            android:id="@+id/tv_main_textView_city"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="北京"
+            android:textSize="18sp"
+            android:layout_weight="3"
+            />
+        <Button
+            android:gravity="center"
+            android:layout_weight="13"
+            android:background="@drawable/btn_big_pressed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="区域/楼盘名/开发商"
+            android:textColor="#FFFFFF"
+            />
+        <ImageView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_sao_1_sao"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/ll_linearLayout_qiantou"
+        android:id="@+id/relat_relativeLayout_pager"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_viewPager_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/tv_textView_title"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="腾讯看房"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/line_linearLayout_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            >
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <GridView
+        android:layout_below="@+id/relat_relativeLayout_pager"
+        android:id="@+id/gv_gridView_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        >
+
+    </GridView>
+
+
+
+</RelativeLayout>

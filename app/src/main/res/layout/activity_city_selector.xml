@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+ <RelativeLayout
+     android:id="@+id/relat_city_01"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="#19ACCA" >
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:gravity="center"
+         android:text="选择城市"
+         android:textColor="#ffffff"
+         android:textSize="21sp" />
+
+     <Button
+         android:onClick="click_cancel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView1"
+         android:layout_alignParentRight="true"
+         android:layout_alignTop="@+id/textView1"
+         android:layout_centerHorizontal="true"
+         android:layout_marginRight="10dp"
+         android:background="#5EC5DA" 
+         android:text="取消"
+         android:textColor="#ffffff" />
+
+ </RelativeLayout>
+ 
+  <!-- 创建一个自定义的ListView，用于实现动态滑动的效果 -->
+  <souyu.com.cityselector.override.TitledListView
+      android:id="@+id/lv_titleCity_ListView"
+      android:layout_below="@+id/relat_city_01"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      ></souyu.com.cityselector.override.TitledListView  >
+
+</RelativeLayout>
